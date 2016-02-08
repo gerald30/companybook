@@ -1,0 +1,86 @@
+nav {
+    float: right;
+    padding: -2px 20px 20px 0;
+    color: #000000;
+}
+ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    float: left;
+    padding: 5px;
+}
+nav ul li a{
+    color: #afd9ee;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #ac2925;
+}
+nav.navbar{
+    background-color: #b92c28;
+}
+
+
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 6px 0;
+    }
+    nav div div a img{
+        width: 60px;
+        height: auto;
+    }
+
+}
+@media screen and (max-width: 830px) {
+    nav div div a img{
+        margin-top: 5px;
+        width: 50px;
+        height: auto;
+    }
+    div div.iCategories{
+        float: left;
+        width: 100%;
+        margin-left: 10%;
+        padding: 0;
+    }
+    div.formInput {
+        padding-top: 50px;
+    }
+
+}
+@media screen and (max-width: 478px){
+
+    section{
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    nav div div a img{
+        width: 50px;
+        height: auto;
+    }
+
+    div div.iCategories{
+        float: left;
+        width: 100%;
+        margin-left: 5%;
+        padding: 0;
+    }
+    div.formInput {
+        padding-top: 50px;
+    }
+
+
+}
+

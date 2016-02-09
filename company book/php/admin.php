@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['name'])){
+    include ('unregisteredNav.php');
+    echo "<h1>Access Denied! please log in</h1><br>returning home in 3 seconds";
+    header("Refresh:3; url=../index.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,13 +21,23 @@
     <script src="../bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../myCss/myCss.css">
     <script>
-        $(function(){
-            $('.createTable').on('click', function(){
-                window.location.href = 'createTable.php';
+        $(function() {
+
+
+            $('.view').on('click', function () {
+                $.ajax({
+                    type: "GET",
+                    url: "view.php",
+
+                    success: function (msg) {
+                        console.log(msg);
+                        $("#results").html(msg);
+
+                    }
+                });
+                return false;
             });
-            $('.view').on('click', function(){
-                window.location.href = 'view.php';
-            });
+
         });
 
 
@@ -53,10 +72,13 @@ div form div.form-group{
                     <a href="#">About</a>
                 </li>
                 <li>
-                    <a href="admin.php">Services</a>
+                    <a href="client.php">Services</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="logout.php">logout</a>
                 </li>
             </ul>
         </div>
@@ -102,6 +124,7 @@ div form div.form-group{
                     <option>Hospital</option>
                     <option>Amusement</option>
                     <option>Employement</option>
+                    <option>Company</option>
                 </select>
             <br>
             <button type="submit" class="btn btn-default">Submit</button>
@@ -111,13 +134,11 @@ div form div.form-group{
     <br>
     <br>
     <hr />
-    <h2>Delete and Create table</h2>
-<button class=" btn btn-default createTable">create table</button>
-    <br>
-    <hr />
+
     <h2>Read all database data</h2>
 <button class=" btn btn-default view">View</button>
     <br>
+    <div id="results"></div>
     <hr />
     <h2>Read categorize database data</h2>
     <br>

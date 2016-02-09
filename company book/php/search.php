@@ -1,4 +1,5 @@
 <?php
+
 $db = new SQLite3('../database/data');
 $cName = test_input($_REQUEST['cName']);
 
@@ -9,11 +10,18 @@ function test_input($data) {
     return SQLite3::escapeString($data);
 }
 
-$query = "SELECT * FROM company WHERE companyName='$cName'";
+
+
+
+$admin = $db->querySingle("SELECT * FROM company WHERE companyName='$cName'", true);
+if($admin == true) {
+
+$query = "SELECT * FROM company WHERE companyName = '$cName'";
 $res = $db->query($query);
 
 echo 'Result:<br>';
 while($row=$res->fetchArray()){
+
     $id = $row['id'];
     $cName = $row['companyName'];
     $cAddress = $row['companyAddress'];
@@ -24,4 +32,9 @@ while($row=$res->fetchArray()){
     $categories = $row['cat'];
 
     echo '	'. $id ." : " . $cName . ' : '. $cAddress." : " . $cNumber ." : " . $ceoName ." : " . $cEmail ." : " . $cDetail ." : " . $categories . '<br>';
+}
+
+
+} else {
+    echo "Not found";
 }

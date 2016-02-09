@@ -1,10 +1,14 @@
 
 <?php
+include ('nav.php');
 $db = new SQLite3('../database/data');
 $query="SELECT * FROM `company`";
 $res=$db->query($query);
 
-echo 'Result:<br>';
+
+
+echo ' <h2>Result</h2>';
+
 while($row=$res->fetchArray()){
     $id = $row['id'];
     $cName = $row['companyName'];

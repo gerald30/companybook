@@ -1,5 +1,5 @@
 <?php
-
+include ('nav.php');
 $cName = test_input($_REQUEST['cName']);
 $cAddress = test_input($_REQUEST['cAddress']);
 $cNumber = test_input($_REQUEST['cNumber']);
@@ -21,12 +21,13 @@ function test_input($data) {
 $admin = $db->querySingle("SELECT * FROM company WHERE companyName='$cName'", true);
 
 if($admin == true) {
-    die("Company Name : $cName is already exist please type another name");
+    header("Refresh:3; url=client.php");
+    die("<h2>Company Name : $cName is already exist please type another name</h2>");
 } else {
 
     $db->exec("INSERT INTO company (companyName , companyAddress, companyNumber, ceoName, companyEmail, companyDetail, cat) VALUES ('$cName', '$cAddress', '$cNumber','$ceoName','$cEmail','$cDetail','$categories')");
-    echo "1 Row inserted ";
-
+    echo "<h1>Your Company has been registered!</h1>";
+    header("Refresh:3; url=client.php");
 }
 
 

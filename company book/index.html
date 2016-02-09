@@ -54,13 +54,16 @@ console.log($home);
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">About</a>
+                    <a href="html/About.html">About</a>
                 </li>
                 <li>
-                    <a href="php/admin.php">Services</a>
+                    <a href="php/client.php">Services</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="html/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="php/register.php">Register</a>
                 </li>
             </ul>
         </div>
@@ -71,13 +74,32 @@ console.log($home);
 
 
 
-
-
 <div class="container">
+
     <div class="jumbotron header1">
         <h1>Philippines Company Book</h1>
         <p>Luzon, Visaya and Mindanao</p>
+        <!-- form login -->
+        <form class="form-horizontal" action="php/login.php">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
+                </div>
+            </div>
 
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -151,7 +173,7 @@ console.log($home);
 <div class="container text-center">
   <h3>Get your Business seen by the tens of thousands of daily visitors of ___________________.com. Register for FREE Now!</h3>
   
-  <br>
+
   <div class="row">
     <div class="col-sm-4">
       <p class="text-center"><strong>Banaue Rice Terraces</strong></p><br>
@@ -285,4 +307,5 @@ console.log($home);
 
 
 </body>
+
 </html>

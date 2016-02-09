@@ -1,47 +1,7 @@
-body{
-	background-color: #f0f0f0 ;
-}
 
-div div.header1{
-	background-color: #333333;
-	width: 100%;
-	color: #fff;
-	opacity: .95;
+@import "base.css";
+@import "layout.css";
 
-}
-div.container{
-	border-radius: 0px;
-}
-
-
-
-
-.jumbotron, .btnHeader {
-	border-radius:0 !important;
-}
-.btnHeader{
-	width: 100px;
-}
-
-
-
-header{
-		background-color: #002db3;
-		width: 100%;
-		height: 50px;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 100;
-		opacity: .90%;
-}
-
-section {
-		width: 29%;
-		float: left;
-		margin: 2% 2%;
-		text-align: center;
-	}
 
 
 div.homeHotel{
@@ -65,8 +25,6 @@ div div.iCategories{
 	margin-left: 15%;
 	margin-right: 15%;
 	margin-bottom: 5%;
-
-
 }
 div p.tab {
 	text-indent: 50px;
@@ -76,50 +34,42 @@ div div nav{
 	text-align: center;
 }
 
-
 div div a.btnHeader:hover {
 	color: #002db3;
 }
 
-
 .person {
       border: 10px solid transparent;
       margin-bottom: 25px;
-  }
-  .person:hover {
+}
+.person:hover {
       border-color: #f1f1f1;
-  }
- 
+}
 
-  footer {
-		background: #333333;
-		width: 100%;
-		overflow: hidden;
-		opacity: .90;
-
-	}
-  footer p, footer h3{
-		color: #fff;
-	}
-	footer p a{
-		color: #fff;
-		text-decoration: none;
-	}
-	ul.social li{
-		display: inline;
-	}
-	ul.social li img{
+footer p, footer h3{
+	color: #fff;
+}
+footer p a{
+	color: #fff;
+	text-decoration: none;
+}
+ul.social li{
+	display: inline;
+}
+ul.social li img{
 	 height: 50px;
 	}
-	footer.second{
-		border-top: 1px solid #4d4e50;
-		text-align: center;
-		background-color: #333333;
-		max-height: 50px;
-		opacity: .95;
+footer.second{
 
-	}
-	footer section a img{
-		margin-top: 5%;
-	}
+	border-top: 1px solid #4d4e50;
+	text-align: center;
+	background-color: #333333;
+	padding-top: 5px;
+	max-height: 50px;
+	opacity: .95;
+
+}
+footer section a img{
+	margin-top: 5%;
+}
 
